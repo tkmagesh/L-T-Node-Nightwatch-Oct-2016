@@ -1,0 +1,25 @@
+{
+  "name": "web-server",
+  "version": "0.1.0",
+  "description": "A sample web server created using node.js",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "watch": "nodemon server.js" 
+  },
+  "keywords": [
+    "http",
+    "server",
+    "demo",
+    "node"
+  ],
+  "author": "Magesh K",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^1.1.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.10.2"
+  }
+}
