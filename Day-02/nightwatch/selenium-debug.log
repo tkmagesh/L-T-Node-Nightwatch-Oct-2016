@@ -1,0 +1,80 @@
+14:52:46.225 INFO - Launching a standalone Selenium Server
+14:52:46.266 INFO - Java: Oracle Corporation 25.101-b13
+14:52:46.266 INFO - OS: Mac OS X 10.10.5 x86_64
+14:52:46.279 INFO - v2.53.1, with Core v2.53.1. Built from revision a36b8b1
+14:52:46.365 INFO - Driver provider org.openqa.selenium.ie.InternetExplorerDriver registration is skipped:
+registration capabilities Capabilities [{ensureCleanSession=true, browserName=internet explorer, version=, platform=WINDOWS}] does not match the current platform MAC
+14:52:46.365 INFO - Driver provider org.openqa.selenium.edge.EdgeDriver registration is skipped:
+registration capabilities Capabilities [{browserName=MicrosoftEdge, version=, platform=WINDOWS}] does not match the current platform MAC
+14:52:46.366 INFO - Driver class not found: com.opera.core.systems.OperaDriver
+14:52:46.366 INFO - Driver provider com.opera.core.systems.OperaDriver is not registered
+14:52:46.368 INFO - Driver class not found: org.openqa.selenium.htmlunit.HtmlUnitDriver
+14:52:46.368 INFO - Driver provider org.openqa.selenium.htmlunit.HtmlUnitDriver is not registered
+14:52:46.436 INFO - RemoteWebDriver instances should connect to: http://127.0.0.1:4444/wd/hub
+14:52:46.436 INFO - Selenium Server is up and running
+14:52:46.752 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, name=First, browserName=chrome, javascriptEnabled=true, platform=ANY}]])
+14:52:46.773 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, name=First, browserName=chrome, javascriptEnabled=true, platform=ANY}]
+14:52:47.014 WARN - Exception thrown
+java.util.concurrent.ExecutionException: org.openqa.selenium.WebDriverException: java.lang.reflect.InvocationTargetException
+Build info: version: '2.53.1', revision: 'a36b8b1', time: '2016-06-30 17:37:03'
+System info: host: 'Mags-Mac.local', ip: '127.0.0.1', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.10.5', java.version: '1.8.0_101'
+Driver info: driver.version: unknown
+	at java.util.concurrent.FutureTask.report(FutureTask.java:122)
+	at java.util.concurrent.FutureTask.get(FutureTask.java:192)
+	at org.openqa.selenium.remote.server.DefaultSession.execute(DefaultSession.java:183)
+	at org.openqa.selenium.remote.server.DefaultSession.<init>(DefaultSession.java:119)
+	at org.openqa.selenium.remote.server.DefaultSession.createSession(DefaultSession.java:95)
+	at org.openqa.selenium.remote.server.DefaultDriverSessions.newSession(DefaultDriverSessions.java:124)
+	at org.openqa.selenium.remote.server.handler.NewSession.handle(NewSession.java:59)
+	at org.openqa.selenium.remote.server.handler.NewSession.handle(NewSession.java:1)
+	at org.openqa.selenium.remote.server.rest.ResultConfig.handle(ResultConfig.java:111)
+	at org.openqa.selenium.remote.server.JsonHttpCommandHandler.handleRequest(JsonHttpCommandHandler.java:79)
+	at org.openqa.selenium.remote.server.DriverServlet.handleRequest(DriverServlet.java:204)
+	at org.openqa.selenium.remote.server.DriverServlet.doPost(DriverServlet.java:166)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:707)
+	at org.openqa.selenium.remote.server.DriverServlet.service(DriverServlet.java:132)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.openqa.jetty.jetty.servlet.ServletHolder.handle(ServletHolder.java:428)
+	at org.openqa.jetty.jetty.servlet.ServletHandler.dispatch(ServletHandler.java:680)
+	at org.openqa.jetty.jetty.servlet.ServletHandler.handle(ServletHandler.java:571)
+	at org.openqa.jetty.http.HttpContext.handle(HttpContext.java:1526)
+	at org.openqa.jetty.http.HttpContext.handle(HttpContext.java:1479)
+	at org.openqa.jetty.http.HttpServer.service(HttpServer.java:920)
+	at org.openqa.jetty.http.HttpConnection.service(HttpConnection.java:820)
+	at org.openqa.jetty.http.HttpConnection.handleNext(HttpConnection.java:986)
+	at org.openqa.jetty.http.HttpConnection.handle(HttpConnection.java:837)
+	at org.openqa.jetty.http.SocketListener.handleConnection(SocketListener.java:243)
+	at org.openqa.jetty.util.ThreadedServer.handle(ThreadedServer.java:358)
+	at org.openqa.jetty.util.ThreadPool$PoolThread.run(ThreadPool.java:537)
+Caused by: org.openqa.selenium.WebDriverException: java.lang.reflect.InvocationTargetException
+Build info: version: '2.53.1', revision: 'a36b8b1', time: '2016-06-30 17:37:03'
+System info: host: 'Mags-Mac.local', ip: '127.0.0.1', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.10.5', java.version: '1.8.0_101'
+Driver info: driver.version: unknown
+	at org.openqa.selenium.remote.server.DefaultDriverProvider.callConstructor(DefaultDriverProvider.java:113)
+	at org.openqa.selenium.remote.server.DefaultDriverProvider.newInstance(DefaultDriverProvider.java:97)
+	at org.openqa.selenium.remote.server.DefaultDriverFactory.newInstance(DefaultDriverFactory.java:60)
+	at org.openqa.selenium.remote.server.DefaultSession$BrowserCreator.call(DefaultSession.java:222)
+	at org.openqa.selenium.remote.server.DefaultSession$BrowserCreator.call(DefaultSession.java:1)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:176)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.server.DefaultDriverProvider.callConstructor(DefaultDriverProvider.java:103)
+	... 9 more
+Caused by: java.lang.IllegalStateException: The driver executable does not exist: /Users/tkmagesh/Documents/Training/L&T-Node-Nightwatch-Oct-2016/Day-02/nightwatch/./bin/chromedriver.exe
+	at com.google.common.base.Preconditions.checkState(Preconditions.java:199)
+	at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:121)
+	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:116)
+	at org.openqa.selenium.chrome.ChromeDriverService.access$0(ChromeDriverService.java:1)
+	at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:137)
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:296)
+	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:88)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:138)
+	... 14 more
+14:52:47.022 WARN - Exception: The driver executable does not exist: /Users/tkmagesh/Documents/Training/L&T-Node-Nightwatch-Oct-2016/Day-02/nightwatch/./bin/chromedriver.exe
